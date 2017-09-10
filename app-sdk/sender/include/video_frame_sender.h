@@ -5,18 +5,18 @@
 
 namespace hos_comm
 {
-	class ISendStrategy;
+	class ISenderStrategy;
 
 	class VideoFrameSender : public ISender
 	{
 	public:
-		explicit VideoFrameSender(ISendStrategy* sender_strategy);
+		explicit VideoFrameSender(ISenderStrategy* sender_strategy);
 
 		~VideoFrameSender() override;
 		void sendFrame(upFrame) override;
 
 	private:
-		ISendStrategy* m_send_strategy;
+		ISenderStrategy* m_sender_strategy;
 	};
 }
 

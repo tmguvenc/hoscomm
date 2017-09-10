@@ -5,10 +5,10 @@
 
 namespace hos_comm
 {
-	class ISendStrategy
+	class ISenderStrategy
 	{
 	public:
-		virtual ~ISendStrategy() { }
+		virtual ~ISenderStrategy() { }
 		virtual void send(void* buffer, uint64_t length, bool more) = 0;
 	};
 }
